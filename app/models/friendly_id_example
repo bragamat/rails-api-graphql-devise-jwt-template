@@ -1,0 +1,26 @@
+# frozen_string_literal: true
+
+# module Companies
+# A company to scope a bunch of users
+#  class Company < ApplicationRecord
+#   extend FriendlyId
+#
+#    self.table_name = 'companies'
+#
+#    # - EXTENSIONS
+##    friendly_id :name, use: :slugged
+
+#  # - VALIDATIONS
+# validates :name, presence: true
+#     validates :name, length: { maximum: 255 }
+#    validates :slug, length: { maximum: 255 }
+#
+# - RELATIONS
+#    has_many :users, dependent: :destroy
+
+# override friendly id checker for categories
+#   def should_generate_new_friendly_id?
+#    (slug.nil? || slug.blank?) || (name_changed? && !slug_changed?)
+#     end
+#   end
+# end

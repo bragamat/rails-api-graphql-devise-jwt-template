@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-docker}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-docker}
+      POSTGRES_DB: ${POSTGRES_DB:-saas_template}
+    volumes:
+      - saas_template:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT:-5444}:5432"
+
+volumes:
+  saas_template:
+
